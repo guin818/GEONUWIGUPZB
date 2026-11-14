@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#D7262E">
+<title>긴급 정보 · 김건우</title>
+<style>
+  :root{--red:#D7262E;--red-soft:#FDECEC;--ink:#1B1B1F;--sub:#6B6B73;--line:#ECECEF;--green:#1E8E4E}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR","Malgun Gothic",sans-serif;
+    background:#F4F4F6;color:var(--ink);line-height:1.5;word-break:keep-all;
+  }
+  .wrap{max-width:480px;margin:0 auto;padding:0 16px calc(24px + env(safe-area-inset-bottom))}
+  header{
+    background:var(--red);color:#fff;margin:0 -16px;
+    padding:calc(20px + env(safe-area-inset-top)) 22px 22px;
+  }
+  .tag{font-size:14px;font-weight:700;opacity:.9}
+  h1{font-size:36px;font-weight:800;letter-spacing:-.02em;margin-top:2px}
+  .meta{font-size:16px;font-weight:600;opacity:.95}
+
+  .card{background:#fff;border-radius:16px;padding:16px 18px;margin-top:12px}
+  .label{font-size:14px;color:var(--sub);font-weight:700;margin-bottom:8px}
+
+  .alert{background:var(--red-soft);border:2px solid var(--red)}
+  .alert .label{color:var(--red)}
+  .alert p{font-size:19px;font-weight:800}
+
+  .rows{list-style:none}
+  .rows li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid var(--line);font-size:16px}
+  .rows li:first-child{border-top:0;padding-top:0}
+  .rows li:last-child{padding-bottom:0}
+  .rows .k{color:var(--sub);flex:none}
+  .rows .v{font-weight:700;text-align:right}
+
+  .who{font-size:20px;font-weight:800}
+  .who span{font-size:14px;color:var(--sub);font-weight:600;margin-left:4px}
+  .phone{font-size:17px;color:var(--sub)}
+  .btns{display:flex;gap:8px;margin-top:12px}
+  .btn{
+    display:flex;align-items:center;justify-content:center;
+    min-height:54px;border-radius:12px;text-decoration:none;
+    color:#fff;font-size:18px;font-weight:800;
+  }
+  .call{flex:1;background:var(--green)}
+  .e119{width:90px;background:var(--red)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="tag">긴급 정보</p>
+    <h1>김건우</h1>
+    <p class="meta">2017년 4월 7일생 · <span id="age">만 9세</span></p>
+  </header>
+
+  <section class="card alert">
+    <p class="label">⚠ 알레르기 · 특이사항</p>
+    <p>달걀 · 고양이 알레르기<br>버섯 공포증</p>
+  </section>
+
+  <section class="card">
+    <ul class="rows">
+      <li><span class="k">혈액형</span><span class="v">A+</span></li>
+      <li><span class="k">장기 기증</span><span class="v">아니요</span></li>
+      <li><span class="k">주소</span><span class="v">경상남도 거제시 양정5길 36,<br>108동 1003호</span></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <p class="label">보호자 연락처</p>
+    <p class="who">김현정<span>엄마</span></p>
+    <p class="phone">010-4112-9555</p>
+    <div class="btns">
+      <a class="btn call" href="tel:01041129555">엄마에게 전화</a>
+      <a class="btn e119" href="tel:119">119</a>
+    </div>
+  </section>
+
+</div>
+<script>
+  (function(){
+    var b=new Date(2017,3,7),t=new Date(),a=t.getFullYear()-b.getFullYear();
+    if(t.getMonth()<b.getMonth()||(t.getMonth()===b.getMonth()&&t.getDate()<b.getDate()))a--;
+    var el=document.getElementById('age'); if(el&&a>0) el.textContent='만 '+a+'세';
+  })();
+</script>
+</body>
+</html>
